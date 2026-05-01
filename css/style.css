@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Pinyon+Script&family=Quicksand:wght@400;600&display=swap'); 
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    min-height: 100vh;
+    background-image: url('../assets/images/anh-1.JPG'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+    padding-bottom: 5vh;
+    overflow: hidden;
+}
+
+.love-letter-container { width: 100%; max-width: 600px; position: relative; }
+
+.envelope {
+    background: rgba(244, 228, 188, 0.9);
+    padding: 4rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.stamp-heart {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2.5rem;
+    animation: heartBeat 1.2s infinite;
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.letter-inside { display: none; }
+.love-letter-container.open .envelope { display: none; }
+.love-letter-container.open .letter-inside { display: block; }
+
+.letter-paper {
+    background: #fffaf2;
+    padding: 25px;
+    border-radius: 12px;
+    position: relative;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* KHU VỰC CUỘN CHỮ */
+.letter-content-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+    /* Chừa chỗ an toàn cho sticker ở dưới */
+    padding-bottom: 110px; 
+}
+/* Ẩn thanh cuộn  */
+.letter-content-scroll::-webkit-scrollbar { width: 0; }
+
+.handwriting {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    line-height: 32px;
+    color: #2c2418;
+    word-wrap: break-word;
+}
+
+/* ẢNH/VID CỐ ĐỊNH */
+.attachments {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 160px;
+    height: 100px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.attachment-item {
+    position: absolute;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.boomerang { width: 85px; bottom: 0; left: 0; transform: rotate(-10deg); }
+.photo { width: 85px; top: 0; right: 0; transform: rotate(8deg); }
+
+.closing {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    text-align: right;
+    font-size: 16px;
+    color: #5a3a22;
+}
