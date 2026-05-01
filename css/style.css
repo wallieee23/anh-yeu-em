@@ -73,14 +73,11 @@ body {
 /* ẢNH/VID CỐ ĐỊNH */
 .attachments {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    width: 160px;
-    height: 100px;
-    pointer-events: none;
-    z-index: 10;
+    /* Thay vì để ở bottom (dưới cùng) bị khuất, mày để nó ở top nhé */
+    top: 50px; 
+    right: 20px;
+    z-index: 999; /* Ép nó nổi lên trên chữ */
 }
-
 .attachment-item {
     position: absolute;
     border: 4px solid white;
