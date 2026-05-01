@@ -70,23 +70,35 @@ body {
     word-wrap: break-word;
 }
 
-/* ẢNH/VID CỐ ĐỊNH */
 .attachments {
     position: absolute;
-    /* Thay vì để ở bottom (dưới cùng) bị khuất, mày để nó ở top nhé */
-    top: 50px; 
-    right: 20px;
-    z-index: 999; /* Ép nó nổi lên trên chữ */
+    top: 20px; /* Chỉnh cho nó sát lên mép trên một chút */
+    right: 10px;
+    width: 80px; /* Thu nhỏ khung chứa lại */
+    height: 60px;
+    z-index: 99;
 }
+
 .attachment-item {
     position: absolute;
-    border: 4px solid white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: 2px solid white; /* Viền mỏng lại cho tinh tế */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background: white;
 }
 
-.boomerang { width: 85px; bottom: 0; left: 0; transform: rotate(-10deg); }
-.photo { width: 85px; top: 0; right: 0; transform: rotate(8deg); }
+.boomerang { 
+    width: 50px; /* Thu nhỏ video */
+    top: 0; 
+    left: 0; 
+    transform: rotate(-10deg); 
+}
 
+.photo { 
+    width: 45px; /* Thu nhỏ ảnh */
+    bottom: 0; 
+    right: 0; 
+    transform: rotate(10deg); 
+}
 .closing {
     position: absolute;
     bottom: 30px;
